@@ -1,5 +1,15 @@
 <script>
-  import {onMount} from 'svelte';
+  import { onMount } from "svelte";
+  import Logo from "./assets/logo.svg";
+
+  //   import {
+  //     ChevronLeft,
+  //     ChevronRight,
+  //     DarkMode,
+  //     GitHub,
+  //     Menu
+  //   } from "/icons/index.js";
+
   let count = 0;
   onMount(() => {
     const interval = setInterval(() => count++, 1000);
@@ -39,12 +49,13 @@
   .App-link {
     color: #ff3e00;
   }
-  .App-logo {
+  .App-header svg {
     height: 36vmin;
     pointer-events: none;
     margin-bottom: 3rem;
     animation: App-logo-pulse infinite 1.6s ease-in-out alternate;
   }
+
   @keyframes App-logo-pulse {
     from {
       transform: scale(1);
@@ -57,11 +68,23 @@
 
 <div class="App">
   <header class="App-header">
-    <img src="/logo.svg" class="App-logo" alt="logo" />
-    <p>Edit <code>src/App.svelte</code> and save to reload.</p>
-    <p>Page has been open for <code>{count}</code> seconds.</p>
+    <Logo />
     <p>
-      <a class="App-link" href="https://svelte.dev" target="_blank" rel="noopener noreferrer">
+      Edit
+      <code>src/App.svelte</code>
+      and save to reload.
+    </p>
+    <p>
+      Page has been open for
+      <code>{count}</code>
+      seconds.
+    </p>
+    <p>
+      <a
+        class="App-link"
+        href="https://svelte.dev"
+        target="_blank"
+        rel="noopener noreferrer">
         Learn Svelte
       </a>
     </p>

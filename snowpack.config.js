@@ -8,15 +8,17 @@ module.exports = {
       src: { url: '/dist' },
    },
    plugins: [
-      '@snowpack/plugin-svelte'
+      '@snowpack/plugin-svelte',
+      './plugins/svelte-inline-svg/plugin.js'
    ],
    packageOptions: {
 
    },
    devOptions: {
-      port: 8080
+      port: 8080,
+      open: 'none'
    },
    buildOptions: {
-
+      htmlFragments: true
    },
 };

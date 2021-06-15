@@ -1,18 +1,13 @@
 {
-  "name": "snowpack-bookshelf",
+  "name": "svelte-inline-svg",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "plugin.js",
   "scripts": {
-    "start": "snowpack dev --verbose",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@snowpack/plugin-svelte": "^3.7.0",
-    "snowpack": "^3.5.5"
-  },
   "dependencies": {
     "svelte": "^3.38.2"
   }
