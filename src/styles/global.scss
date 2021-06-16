@@ -1,0 +1,91 @@
+@import "./variables";
+@import "./remedy.scss";
+@import "./fonts.scss";
+@import "./typography.scss";
+@import "./book.scss";
+
+
+
+// dark/light modes
+body {
+   background-color: var(--color-background);
+   color: var(--color-text);
+   transition: background-color var(--transition), color var(--transition);
+}
+
+@media (prefers-color-scheme:dark) {
+   :root {
+      --color-text: var(--color-light);
+      --color-background: var(--color-dark);
+   }
+
+   .dark {
+      --color-text: var(--color-light);
+      --color-background: var(--color-dark);
+   }
+
+   .light {
+      --color-text: var(--color-dark);
+      --color-background: var(--color-light);
+   }
+
+}
+
+main {
+   width: 35rem;
+   max-width: calc(100% - 4vw);
+   margin: 0 auto;
+}
+
+svg {
+   height: 100%;
+   width: auto;
+}
+
+// create ripple effect
+.ripple {
+   position: relative;
+   overflow: hidden;
+   transform: translate3d(0, 0, 0);
+}
+
+.ripple:after {
+   content: "";
+   display: block;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   pointer-events: none;
+   background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+   background-repeat: no-repeat;
+   background-position: 50%;
+   transform: scale(10, 10);
+   opacity: 0;
+   transition: transform .5s, opacity 1s;
+}
+
+.ripple:active:after {
+   transform: scale(0, 0);
+   opacity: .3;
+   transition: 0s;
+}
+
+
+.App-header svg {
+   height: 36vmin;
+   pointer-events: none;
+   margin-bottom: 3rem;
+   animation: App-logo-pulse infinite 1.6s ease-in-out alternate;
+}
+
+@keyframes App-logo-pulse {
+   from {
+      transform: scale(1);
+   }
+
+   to {
+      transform: scale(1.06);
+   }
+}

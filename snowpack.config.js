@@ -5,11 +5,13 @@
 module.exports = {
    mount: {
       public: { url: '/', static: true, resolve: false },
-      src: { url: '/dist' },
+      src: {  url: '/' },
    },
    plugins: [
       '@snowpack/plugin-svelte',
-      './plugins/svelte-inline-svg/plugin.js'
+      '@snowpack/plugin-sass',
+      './plugins/svelte-inline-svg/plugin.js',
+      ['./plugins/html-fragments/plugin.js', { source: "src/book" }]
    ],
    packageOptions: {
 

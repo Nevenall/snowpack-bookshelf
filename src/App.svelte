@@ -10,6 +10,8 @@
   //     Menu
   //   } from "/icons/index.js";
 
+  import { Readme } from "/book/index.js";
+
   let count = 0;
   onMount(() => {
     const interval = setInterval(() => count++, 1000);
@@ -49,21 +51,6 @@
   .App-link {
     color: #ff3e00;
   }
-  .App-header svg {
-    height: 36vmin;
-    pointer-events: none;
-    margin-bottom: 3rem;
-    animation: App-logo-pulse infinite 1.6s ease-in-out alternate;
-  }
-
-  @keyframes App-logo-pulse {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(1.06);
-    }
-  }
 </style>
 
 <div class="App">
@@ -89,4 +76,5 @@
       </a>
     </p>
   </header>
+  <Readme />
 </div>

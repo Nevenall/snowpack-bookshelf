@@ -10,10 +10,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@snowpack/plugin-sass": "^1.4.0",
     "@snowpack/plugin-svelte": "^3.7.0",
-    "snowpack": "^3.5.5"
-  },
-  "dependencies": {
+    "snowpack": "^3.5.5",
     "svelte": "^3.38.2"
-  }
+  },
+  "dependencies": {}
 }
