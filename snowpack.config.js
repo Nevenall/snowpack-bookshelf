@@ -11,7 +11,7 @@ module.exports = {
       '@snowpack/plugin-svelte',
       '@snowpack/plugin-sass',
       './plugins/svelte-inline-svg/plugin.js',
-      ['./plugins/html-fragments/plugin.js', { source: "src/book" }]
+      ['./plugins/pages/plugin.js', { source: "src/book" }]
    ],
    packageOptions: {
 

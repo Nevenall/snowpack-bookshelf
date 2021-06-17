@@ -3,16 +3,15 @@ const compiler = require('svelte/compiler')
 
 module.exports = function (_, options) {
    return {
-      name: 'html-fragments',
+      name: 'pages',
       resolve: {
-         input: ['.book.html'],
+         input: ['.page.html'],
          output: ['.js'],
       },
+
       async load({ filePath }) {
-         // console.log(options)
          var ret = null
          try {
-            console.log(filePath)
             let source = await fs.readFile(filePath, 'utf-8')
             let compiled = compiler.compile(source, { filename: filePath })
             ret = compiled.js.code

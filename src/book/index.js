@@ -1,3 +1,3 @@
-import Readme from './readme.book.html'
+import Readme from './readme.page.html'
 
 export { Readme }
